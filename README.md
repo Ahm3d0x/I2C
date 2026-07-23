@@ -167,6 +167,4 @@ Electronics and Communications Engineering
 
 Email: ahm3d.m.attia@gmail.com
 
-Electronics and Communications Engineering
-
 GitHub: https://github.com/Ahm3d0x
