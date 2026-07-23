@@ -82,7 +82,7 @@ This allows the master to be fully verified without requiring a separate slave i
 
 # Test Results
 
-## Test 1 — Single Write Transaction
+## Test 1
 
 ### Waveform
 
@@ -94,8 +94,7 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 2 — Multi-byte Write Transaction
-
+## Test 2
 ### Waveform
 
 ![Test 2 Write](tb_result/test2_w.png)
@@ -106,7 +105,7 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 3 — Single Read Transaction
+## Test 3
 
 ### Waveform
 
@@ -118,7 +117,7 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 4 — Multi-byte Read Transaction
+## Test 4
 
 ### Waveform
 
@@ -130,7 +129,7 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 5 — NACK and Error Handling
+## Test 5
 
 ### Waveform
 
