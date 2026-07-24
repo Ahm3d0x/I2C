@@ -1,13 +1,13 @@
 # I2C Master Controller
 
-An implementation of an **I²C Master Controller** using **Verilog HDL**. This project was developed as the final project for the **NTI Digital Design Training**.
-The design implements the master side of the I²C protocol and was verified using a self-developed Verilog testbench with a simulated slave device.
+An implementation of an **I²C Master Controller** using **Verilog HDL**.
+
+This project was developed as the **Final Project** for the **NTI Digital Design Training**. The design implements the **Master side** of the I²C protocol and was verified using a custom Verilog testbench with a simulated slave model.
+
 
 ---
-Name : Ahmed Mohamed Attia Mohamed
----
 
-## Features
+# Features
 
 - I²C Start Condition
 - 7-bit Slave Address + R/W Bit
@@ -16,40 +16,66 @@ Name : Ahmed Mohamed Attia Mohamed
 - Multi-byte Transfer
 - ACK / NACK Detection
 - Error Handling
-- Busy & Data Ready Flags
+- Busy Flag
+- Data Ready Flag
 - Stop Condition
 - Configurable SCL Clock Divider
-- FSM-Based Architecture
+- FSM-Based Design
 
 ---
 
-## Project Structure
+# Project Structure
 
-```
+```text
 .
-├── master.v              # I2C Master
-├── master_tb.v           # Testbench
-├── RTL_view.pdf          # RTL schematic
-├── i2c con output.txt    # Simulation log
-├── tb_result/
-│   ├── test1_w.png
+├── master.v
+├── master_tb.v
+├── master RTL view.pdf
+├── slave.v
+├── i2c_top.png
+├── slave RTL view.pdf
+├── i2c_top.v
+├── i2c_top RTL view.pdf
+├── i2c con output.txt
+├── tb_result
+│   ├── test1_W.png
 │   ├── test1_con.png
-│   ├── test2_w.png
+│   ├── test2_W.png
 │   ├── test2_con.png
-│   ├── test3_w.png
+│   ├── test3_W.png
 │   ├── test3_con.png
-│   ├── test4_w.png
+│   ├── test4_W.png
 │   ├── test4_con.png
-│   ├── test5_w.png
+│   ├── test5_W.png
 │   └── test5_con.png
 └── README.md
 ```
 
 ---
 
-## Design Overview
+# Architecture
 
-The controller is implemented as a **Finite State Machine (FSM)** that manages the complete I²C communication sequence.
+## I2C Top-Level RTL
+
+![I2C Top RTL](i2c_top%20RTL%20view.png)
+
+---
+
+## Master RTL
+
+> Open **master RTL view.pdf** for the complete RTL schematic.
+
+---
+
+## Slave RTL
+
+> Open **slave RTL view.pdf** for the complete RTL schematic.
+
+---
+
+# Design Overview
+
+The controller is implemented as a **Finite State Machine (FSM)**.
 
 Implemented states include:
 
@@ -65,28 +91,40 @@ Implemented states include:
 
 ---
 
-## Verification
+# Verification
 
-A complete Verilog testbench was developed to verify the controller functionality.
+A dedicated Verilog testbench was written to verify the controller.
 
-Instead of implementing a complete I²C Slave module, a simple slave model was created inside the testbench to emulate:
+Instead of implementing a complete I²C slave, a lightweight slave model was created inside the testbench to emulate:
 
 - Address ACK
 - Data ACK
-- Read Data Generation
-- NACK Generation
+- Read Data
+- NACK Response
 
-This allows the master to be fully verified without requiring a separate slave implementation.
+This approach allowed complete verification of the master without requiring a separate slave implementation.
+
+---
+
+# Test Cases
+
+| Test | Description |
+|------|-------------|
+| Test 1 | Write Transaction |
+| Test 2 | Read Transaction |
+| Test 3 | Address NACK and Retry |
+| Test 4 | Multi-byte Read |
+| Test 5 | Error Handling |
 
 ---
 
 # Test Results
 
-## Test 1
+## Test 1 — Write Transaction
 
 ### Waveform
 
-![Test 1 Write](tb_result/test1_w.png)
+![Test 1](tb_result/test1_W.png)
 
 ### Console Output
 
@@ -94,10 +132,11 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 2
+## Test 2 — Read Transaction
+
 ### Waveform
 
-![Test 2 Write](tb_result/test2_w.png)
+![Test 2](tb_result/test2_W.png)
 
 ### Console Output
 
@@ -105,11 +144,11 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 3
+## Test 3 — Address NACK & Retry
 
 ### Waveform
 
-![Test 3 Read](tb_result/test3_w.png)
+![Test 3](tb_result/test3_W.png)
 
 ### Console Output
 
@@ -117,11 +156,11 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 4
+## Test 4 — Multi-byte Read
 
 ### Waveform
 
-![Test 4 Read](tb_result/test4_w.png)
+![Test 4](tb_result/test4_W.png)
 
 ### Console Output
 
@@ -129,11 +168,11 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Test 5
+## Test 5 — Error Handling
 
 ### Waveform
 
-![Test 5 Error](tb_result/test5_w.png)
+![Test 5](tb_result/test5_W.png)
 
 ### Console Output
 
@@ -141,29 +180,43 @@ This allows the master to be fully verified without requiring a separate slave i
 
 ---
 
-## Tools
+# Tools
+
+- Verilog HDL
+- Intel Quartus Prime Lite
 - ModelSim
-- Intel Quartus Prime Lite 
 - GitHub
+
 ---
 
+# Notes
 
-## Notes
+- The project contains the I²C Master, I²C Slave, and a top-level module.
+- Verification was completed for the Master controller using a custom testbench.
+- The Slave and top-level modules were implemented, but dedicated testbenches for them have not been completed yet.
+---
 
-- This repository contains **only the I²C Master implementation**.
-- Due to the limited project time, the I²C Slave was not implemented as a standalone module.
-- A simple slave model was created inside the testbench to emulate slave behavior for verification.
-- The testbench covers write, read, multi-byte transfer, ACK/NACK handling, and error scenarios.
+# Repository Contents
 
+- RTL source code
+- Testbench
+- RTL schematics
+- Simulation console log
+- Waveform screenshots
+- Verification results
+
+---
 ---
 
 ## Author
 
-**Ahmed Mohamed Attia**
+**Ahmed Mohamed Attia Mohamed**
 
 Faculty of Engineering, Zagazig University  
 Electronics and Communications Engineering
 
 Email: ahm3d.m.attia@gmail.com
 
-GitHub: https://github.com/Ahm3d0x
+# License
+
+This project was developed for educational purposes as part of the **NTI Digital Design Training**.
