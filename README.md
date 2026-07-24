@@ -108,19 +108,18 @@ This approach allowed complete verification of the master without requiring a se
 
 # Test Cases
 
-| Test | Description |
-|------|-------------|
-| Test 1 | Write Transaction |
-| Test 2 | Read Transaction |
-| Test 3 | Address NACK and Retry |
-| Test 4 | Multi-byte Read |
-| Test 5 | Error Handling |
+
+| Test Write Transaction 
+| Test Read Transaction 
+| Test Address NACK and Retry 
+| Test Multi-byte Read 
+| Test Error Handling 
 
 ---
 
 # Test Results
 
-## Test 1 — Write Transaction
+## Test 1
 
 ### Waveform
 
@@ -132,8 +131,7 @@ This approach allowed complete verification of the master without requiring a se
 
 ---
 
-## Test 2 — Read Transaction
-
+## Test 2
 ### Waveform
 
 ![Test 2](tb_result/test2_W.png)
@@ -144,8 +142,7 @@ This approach allowed complete verification of the master without requiring a se
 
 ---
 
-## Test 3 — Address NACK & Retry
-
+## Test 3
 ### Waveform
 
 ![Test 3](tb_result/test3_W.png)
@@ -156,8 +153,7 @@ This approach allowed complete verification of the master without requiring a se
 
 ---
 
-## Test 4 — Multi-byte Read
-
+## Test 4 
 ### Waveform
 
 ![Test 4](tb_result/test4_W.png)
@@ -168,8 +164,7 @@ This approach allowed complete verification of the master without requiring a se
 
 ---
 
-## Test 5 — Error Handling
-
+## Test 5
 ### Waveform
 
 ![Test 5](tb_result/test5_W.png)
