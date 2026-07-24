@@ -123,7 +123,7 @@ This approach allowed complete verification of the master without requiring a se
 
 ### Waveform
 
-![Test 1](tb_result/test1_W.png)
+![Test 1](tb_result/test1_w.png)
 
 ### Console Output
 
@@ -134,7 +134,7 @@ This approach allowed complete verification of the master without requiring a se
 ## Test 2
 ### Waveform
 
-![Test 2](tb_result/test2_W.png)
+![Test 2](tb_result/test2_w.png)
 
 ### Console Output
 
@@ -145,7 +145,7 @@ This approach allowed complete verification of the master without requiring a se
 ## Test 3
 ### Waveform
 
-![Test 3](tb_result/test3_W.png)
+![Test 3](tb_result/test3_w.png)
 
 ### Console Output
 
@@ -156,7 +156,7 @@ This approach allowed complete verification of the master without requiring a se
 ## Test 4 
 ### Waveform
 
-![Test 4](tb_result/test4_W.png)
+![Test 4](tb_result/test4_w.png)
 
 ### Console Output
 
@@ -167,7 +167,7 @@ This approach allowed complete verification of the master without requiring a se
 ## Test 5
 ### Waveform
 
-![Test 5](tb_result/test5_W.png)
+![Test 5](tb_result/test5_w.png)
 
 ### Console Output
 
