@@ -1,0 +1,31 @@
+# ModelSim / QuestaSim Simulation Artifacts
+work/
+transcript
+vsim.wlf
+*.wlf
+wlft*
+*.vstf
+covhtmlreport/
+*.ucdb
+
+# Intel Quartus Prime EDA / Synthesis Junk
+db/
+incremental_db/
+simulation/
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.pin
+*.sld
+*.bak
+c5_pin_model_dump.txt
+
+# System / OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
