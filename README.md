@@ -1,4 +1,4 @@
-# I2C Master Controller
+# I2C
 
 An implementation of an **I²C Master Controller** using **Verilog HDL**.
 
